@@ -5,9 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mike Toolan - Broadcaster, Presenter &amp; Live Host | CGTalent</title>
 <meta name="description" content="Mike Toolan - one of the UK's most experienced broadcasters and live event hosts. Hits Radio Drivetime, 18 years at Key 103, and host of major UK events.">
+<!-- social sharing (Open Graph / Twitter) -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="CGTalent">
+<meta property="og:title" content="Mike Toolan - Broadcaster, Presenter &amp; Live Host">
+<meta property="og:description" content="Hits Radio Drivetime alongside Gemma Atkinson, 18 years at Key 103, and host of major UK events - from the Etihad Stadium to Ed Sheeran in Gail Platt's living room.">
+<meta property="og:url" content="https://cgtalent.uk/mike_toolan.html">
+<meta property="og:image" content="https://cgtalent.uk/images/og-mike.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mike Toolan - broadcaster, presenter and live host">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mike Toolan - Broadcaster, Presenter &amp; Live Host">
+<meta name="twitter:description" content="Hits Radio Drivetime alongside Gemma Atkinson, 18 years at Key 103, and host of major UK events.">
+<meta name="twitter:image" content="https://cgtalent.uk/images/og-mike.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <style>
   :root{
     --red:#ff2b2b;
@@ -123,10 +137,27 @@
   footer .fbrand{font-family:var(--display);font-size:1rem;text-transform:uppercase}
   .footline{font-size:.66rem;letter-spacing:.14em;text-align:center;margin-top:26px;opacity:.55}
 
+  /* show reel */
+  .reel-intro{margin-top:22px;max-width:640px;line-height:1.95}
+  .reel{position:relative;margin-top:34px;border:1px solid rgba(255,255,255,.28);border-radius:6px;overflow:hidden;background:#000;aspect-ratio:16/9}
+  .reel img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:saturate(1.05)}
+  .reel iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .reel .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.62));pointer-events:none}
+  .reel-btn{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;background:none;border:0;cursor:pointer;color:#fff;font-family:var(--mono)}
+  .reel-btn .circ{width:92px;height:92px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 44px rgba(0,0,0,.55);transition:transform .18s ease,background .18s ease}
+  .reel-btn .circ svg{width:26px;height:26px;margin-left:5px}
+  .reel-btn:hover .circ{transform:scale(1.07);background:#ff4d4d}
+  .reel-btn .txt{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;text-shadow:0 2px 14px rgba(0,0,0,.9)}
+  .reel-btn .placeholder{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;line-height:1.9;max-width:420px;padding:0 24px;text-align:center;text-shadow:0 2px 14px rgba(0,0,0,.9)}
+  .reel-note{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:18px;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+  .reel-note b{color:var(--red);font-weight:400}
+
   @media(max-width:900px){
     .hero-grid,.split{grid-template-columns:1fr}
     .hero-copy{padding:60px 0 48px}
     .hero-photo{min-height:360px}
+    .reel-btn .circ{width:72px;height:72px}
+    .reel{gap:0}
     .stats{grid-template-columns:1fr 1fr}
     .grid{grid-template-columns:1fr 1fr}
     .hl-row{grid-template-columns:64px 1fr;padding:28px 0;gap:20px}
@@ -153,7 +184,7 @@
     <a class="brand" href="https://cgtalent.github.io/cgtalent-preview/index.html"><b>CG</b>TALENT</a>
     <nav>
       <a href="https://cgtalent.github.io/cgtalent-preview/index.html#hosts">Live Hosts</a>
-      <a href="mike_toolan.html" class="on">Mike Toolan</a>
+      <a href="./" class="on">Mike Toolan</a>
       <a href="https://cgtalent.github.io/cgtalent-preview/index.html#contact">Contact</a>
     </nav>
     <a class="pill pill-red" href="https://cgtalent.github.io/cgtalent-preview/index.html#contact">Hire a host</a>
@@ -176,6 +207,26 @@
       <div class="hero-photo duo duo-purple">
         <img src="images/mt-etihad-robbie.jpg" alt="Mike Toolan hosting on stage at the Etihad Stadium">
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOW REEL -->
+<section class="sec-black" id="showreel">
+  <div class="wrap">
+    <span class="label">Watch</span>
+    <h2 style="margin-top:16px;">Mike Toolan hosting<br>show reel.</h2>
+    <p class="reel-intro">Two minutes of Mike in his natural habitat - working the room, warming up a stadium and hosting a live show. Sound on.</p>
+    <div class="reel" id="reel">
+      <img src="images/mt-arena.jpg" alt="Mike Toolan hosting live on stage in front of a packed arena">
+      <div class="scrim"></div>
+      <button class="reel-btn" type="button" data-video="" aria-label="Play the Mike Toolan hosting show reel">
+        <span class="circ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v18l13-9z" fill="#fff"/></svg></span>
+        <span class="txt">Play show reel</span>
+      </button>
+    </div>
+    <div class="reel-note">
+      <span>Manchester Arena</span><b>&middot;</b><span>Etihad Stadium</span><b>&middot;</b><span>The Brit Fest</span><b>&middot;</b><span>Awards &amp; charity nights</span><b>&middot;</b><span>Hits Radio Drivetime</span>
     </div>
   </div>
 </section>
@@ -203,23 +254,14 @@
       <p>But Mike is just as comfortable in front of a packed stadium as Mike is behind a radio microphone. From major festivals and awards ceremonies to corporate events and high-profile charity fundraisers, Mike has spent years entertaining audiences of every size.</p>
       <p>Mike&rsquo;s credits include hosting <strong>Manchester United&rsquo;s historic Treble-winning celebration</strong>, <strong>David Beckham&rsquo;s UNICEF testimonial at Old Trafford</strong>, <strong>The Brit Fest</strong>, the <strong>Manchester United Players&rsquo; Awards</strong> and events for <strong>Sir Alex Ferguson&rsquo;s charities</strong>.</p>
     </div>
-    <div class="frame duo duo-red" style="aspect-ratio:4/5;">
-      <img src="images/mt-arena.jpg" alt="Mike Toolan hosting in front of an arena crowd">
-    </div>
-  </div>
-</section>
-
-<!-- FEATURE -->
-<section class="sec-purple">
-  <div class="wrap split">
-    <div class="frame" style="border:1px solid rgba(255,255,255,.35);">
-      <img src="images/mt-ed-sheeran.jpg" alt="Mike Toolan with Ed Sheeran and the Coronation Street cast on the Rovers Return set" style="display:block;width:100%;height:100%;object-fit:cover;">
-    </div>
     <div>
-      <span class="label">A hosting moment</span>
-      <h2 class="feature-head">Ed Sheeran in<br>Gail Platt&rsquo;s<br>living room.</h2>
-      <p class="feature-sub">A brilliantly unusual setting for one of the world&rsquo;s biggest music stars.</p>
-      <div style="margin-top:30px;"><a class="pill pill-white" href="#gallery">See more moments &rarr;</a></div>
+      <div class="frame" style="border:1px solid rgba(255,255,255,.2);">
+        <img src="images/mike-sir-alex.jpg" alt="Mike Toolan in conversation with Sir Alex Ferguson" style="display:block;width:100%;height:auto;">
+      </div>
+      <div class="pull" style="margin-top:26px;">
+        <em>&ldquo;Mike has hosted a number of my charity events and always does a brilliant job. He is thoroughly professional and always entertaining&rdquo;</em>
+        <div style="margin-top:16px;font-family:var(--display);text-transform:uppercase;font-size:1rem;line-height:1.2;color:var(--red);">- Sir Alex Ferguson</div>
+      </div>
     </div>
   </div>
 </section>
@@ -233,10 +275,10 @@
       <div class="hl-row">
         <div class="n">01</div>
         <div>
-          <div class="t">Ed Sheeran in Gail Platt&rsquo;s living room</div>
-          <div class="d">A brilliantly unusual setting for one of the world&rsquo;s biggest music stars.</div>
+          <div class="t">Manchester United&rsquo;s Treble-winning celebration</div>
+          <div class="d">Manchester Arena 1999 - Broadcast live on ITV and Sky</div>
         </div>
-        <div class="thumb"><img src="images/mt-ed-sheeran.jpg" alt="Mike Toolan with Ed Sheeran on the Coronation Street set"></div>
+        <div class="thumb"><img src="images/mt-manu-1999.jpg" alt="Mike Toolan interviewing Sir Alex Ferguson at Manchester United's Treble-winning celebration"></div>
       </div>
       <div class="hl-row">
         <div class="n">02</div>
@@ -265,11 +307,34 @@
       <div class="hl-row">
         <div class="n">05</div>
         <div>
-          <div class="t">Dozens of charity events</div>
-          <div class="d">Including events supporting <strong>The Christie</strong> and <strong>Royal Manchester Children&rsquo;s Hospital</strong>, of which Mike is a patron.</div>
+          <div class="t">Ed Sheeran in Gail Platt&rsquo;s living room</div>
+          <div class="d">A brilliantly unusual setting for one of the world&rsquo;s biggest music stars.</div>
         </div>
-        <div class="thumb"><img src="images/mt-charity-portrait.jpg" alt="Mike Toolan hosting a charity event"></div>
+        <div class="thumb"><img src="images/mt-ed-sheeran.jpg" alt="Mike Toolan with Ed Sheeran on the Coronation Street set"></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec-purple" id="gallery">
+  <div class="wrap">
+    <span class="label">Out &amp; about</span>
+    <h2 style="margin-top:16px;">Mike Toolan: A few moments<br>from the calendar.</h2>
+    <p style="margin-top:22px;max-width:660px;line-height:1.95;">Stadiums, studios, festival stages, awards nights, corporate events &amp; charity balls - this is where Mike works.</p>
+    <div class="grid">
+      <div class="g"><img src="images/mt-beckham.jpg" alt="Mike Toolan interviewing David Beckham"><span class="cap">David Beckham · UNICEF testimonial, Old Trafford</span></div>
+      <div class="g"><img src="images/mt-brit-fest-2025.jpg" alt="Mike Toolan hosting The Brit Fest 2025"><span class="cap">The Brit Fest, 2025</span></div>
+      <div class="g"><img src="images/mt-hits-live-2025.jpg" alt="Mike Toolan and Gemma Atkinson at Hits Radio Live 2025"><span class="cap">Hits Radio Live, 2025</span></div>
+      <div class="g"><img src="images/mt-one-direction-2015.jpg" alt="Mike Toolan with One Direction at Manchester Arena"><span class="cap">One Direction · Manchester Arena</span></div>
+      <div class="g"><img src="images/mt-this-morning.jpg" alt="Mike Toolan on the This Morning set"><span class="cap">This Morning · ITV</span></div>
+      <div class="g"><img src="images/mt-charity-auction.jpg" alt="Mike Toolan hosting a charity ball and auction"><span class="cap">Charity Ball &amp; Auction</span></div>
+      <div class="g"><img src="images/mt-dexters-ball-2019.jpg" alt="Mike Toolan hosting Dexter's Charity Ball"><span class="cap">Dexter&rsquo;s Charity Ball</span></div>
+      <div class="g"><img src="images/mt-gala-dinner.jpg" alt="Mike Toolan and Gemma Atkinson at a gala dinner"><span class="cap">Gala dinner · Royal Manchester Children&rsquo;s Hospital</span></div>
+      <div class="g top"><img src="images/mt-christmas-lights.jpg" alt="Mike Toolan switching on Manchester's Christmas lights"><span class="cap">Manchester Christmas lights switch-on</span></div>
+      <div class="g"><img src="images/mt-trafford-xmas.jpg" alt="Mike Toolan at the Trafford Centre Christmas lights"><span class="cap">Trafford Centre Christmas lights</span></div>
+      <div class="g top"><img src="images/mt-festival-stage.jpg" alt="Mike Toolan hosting the Brit Fest main stage"><span class="cap">Brit Fest 2026: Main Stage</span></div>
+      <div class="g top"><img src="images/mt-charity-2025.jpg" alt="Mike Toolan hosting a charity event in 2025"><span class="cap">Charity event, 2025</span></div>
     </div>
   </div>
 </section>
@@ -292,35 +357,13 @@
     </div>
     <div class="split" style="margin-top:60px;align-items:start;">
       <div class="body-copy">
-        <p>And Mike&rsquo;s experience extends far beyond traditional event hosting. Whether it&rsquo;s <strong>after-dinner speaking, talking to students or addressing the media industry</strong>, Mike brings the same qualities to every room: <strong>warmth, quick thinking, natural humour and an instinctive ability to connect with an audience</strong>.</p>
+        <p>Mike&rsquo;s experience extends far beyond traditional event hosting. From after-dinner speaking and talking to students to addressing audiences within the media industry, he brings the same qualities to every room - warmth, quick thinking, natural humour and an instinctive ability to connect with people.</p>
+        <p>Mike is also a passionate supporter of charitable causes and has hosted dozens of fundraising events, including those supporting <strong>The Christie</strong> and <strong>Royal Manchester Children&rsquo;s Hospital</strong>, where he is a patron.</p>
         <p>Mike knows how to read a room, react when something unexpected happens and keep an event moving without ever making it feel forced.</p>
       </div>
       <div class="frame" style="border:1px solid rgba(255,255,255,.2);">
         <img src="images/mt-charity-portrait.jpg" alt="Mike Toolan hosting a charity event" style="display:block;width:100%;height:100%;object-fit:cover;">
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section class="sec-purple" id="gallery">
-  <div class="wrap">
-    <span class="label">Out &amp; about</span>
-    <h2 style="margin-top:16px;">Mike Toolan: A few moments<br>from the calendar.</h2>
-    <p style="margin-top:22px;max-width:660px;line-height:1.95;">Stadiums, studios, festival stages, awards nights, corporate events &amp; charity balls - this is where Mike works.</p>
-    <div class="grid">
-      <div class="g"><img src="images/mt-beckham.jpg" alt="Mike Toolan interviewing David Beckham"><span class="cap">David Beckham · UNICEF testimonial, Old Trafford</span></div>
-      <div class="g"><img src="images/mt-brit-fest-2025.jpg" alt="Mike Toolan hosting The Brit Fest 2025"><span class="cap">The Brit Fest, 2025</span></div>
-      <div class="g"><img src="images/mt-hits-live-2025.jpg" alt="Mike Toolan and Gemma Atkinson at Hits Radio Live 2025"><span class="cap">Hits Radio Live, 2025</span></div>
-      <div class="g"><img src="images/mt-one-direction-2015.jpg" alt="Mike Toolan with One Direction at Manchester Arena"><span class="cap">One Direction · Manchester Arena</span></div>
-      <div class="g"><img src="images/mt-this-morning.jpg" alt="Mike Toolan on the This Morning set"><span class="cap">This Morning · ITV</span></div>
-      <div class="g"><img src="images/mt-sir-alex.jpg" alt="Mike Toolan in conversation with Sir Alex Ferguson"><span class="cap">In conversation with Sir Alex Ferguson</span></div>
-      <div class="g"><img src="images/mt-dexters-ball-2019.jpg" alt="Mike Toolan hosting Dexter's Charity Ball"><span class="cap">Dexter&rsquo;s Charity Ball</span></div>
-      <div class="g"><img src="images/mt-gala-dinner.jpg" alt="Mike Toolan and Gemma Atkinson at a gala dinner"><span class="cap">Gala dinner · Royal Manchester Children&rsquo;s Hospital</span></div>
-      <div class="g top"><img src="images/mt-christmas-lights.jpg" alt="Mike Toolan switching on Manchester's Christmas lights"><span class="cap">Manchester Christmas lights switch-on</span></div>
-      <div class="g"><img src="images/mt-trafford-xmas.jpg" alt="Mike Toolan at the Trafford Centre Christmas lights"><span class="cap">Trafford Centre Christmas lights</span></div>
-      <div class="g top"><img src="images/mt-festival-stage.jpg" alt="Mike Toolan hosting the Brit Fest main stage"><span class="cap">Brit Fest 2026: Main Stage</span></div>
-      <div class="g top"><img src="images/mt-charity-2025.jpg" alt="Mike Toolan hosting a charity event in 2025"><span class="cap">Charity event, 2025</span></div>
     </div>
   </div>
 </section>
@@ -355,13 +398,14 @@
     <div>
       <h4>Explore</h4>
       <p><a href="https://cgtalent.github.io/cgtalent-preview/index.html#hosts">Live Hosts</a></p>
-      <p><a href="mike_toolan.html">Mike Toolan</a></p>
+      <p><a href="./">Mike Toolan</a></p>
       <p><a href="https://cgtalent.github.io/cgtalent-preview/index.html#how">How it works</a></p>
       <p><a href="https://cgtalent.github.io/cgtalent-preview/index.html#contact">Contact</a></p>
     </div>
     <div>
       <h4>Contact</h4>
       <p><a href="mailto:contact@cgtalent.uk">contact@cgtalent.uk</a></p>
+      <p><a href="tel:+447861362636" style="white-space:nowrap;">UK - Call / Text / WhatsApp: 07861 36 26 36</a></p>
       <p><a href="https://cgtalent.github.io/cgtalent-preview/index.html#contact">Send a message</a></p>
     </div>
   </div>
@@ -369,5 +413,31 @@
 </footer>
 
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script>
+/* show reel: swap the poster for the video player on click (no video loaded until asked) */
+(function(){
+  var reel = document.getElementById('reel');
+  if(!reel) return;
+  var btn = reel.querySelector('.reel-btn');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var id = (btn.getAttribute('data-video') || '').trim();
+    if(!id){
+      btn.innerHTML = '<span class="placeholder">Show reel video gets added here.<br>Poster frame shown for now.</span>';
+      btn.disabled = true;
+      btn.style.cursor = 'default';
+      return;
+    }
+    var ifr = document.createElement('iframe');
+    ifr.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+    ifr.title = 'Mike Toolan hosting show reel';
+    ifr.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen');
+    ifr.setAttribute('allowfullscreen', '');
+    reel.innerHTML = '';
+    reel.appendChild(ifr);
+  });
+})();
+</script>
+
 </body>
 </html>
