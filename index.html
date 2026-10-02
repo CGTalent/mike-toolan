@@ -137,7 +137,7 @@
   footer .fbrand{font-family:var(--display);font-size:1rem;text-transform:uppercase}
   .footline{font-size:.66rem;letter-spacing:.14em;text-align:center;margin-top:26px;opacity:.55}
 
-  /* show reel */
+/* show reel */
   .reel-intro{margin-top:22px;max-width:640px;line-height:1.95}
   .reel{position:relative;margin-top:34px;border:1px solid rgba(255,255,255,.28);border-radius:6px;overflow:hidden;background:#000;aspect-ratio:16/9}
   .reel img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:saturate(1.05)}
@@ -150,14 +150,11 @@
   .reel-btn .txt{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;text-shadow:0 2px 14px rgba(0,0,0,.9)}
   .reel-btn .placeholder{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;line-height:1.9;max-width:420px;padding:0 24px;text-align:center;text-shadow:0 2px 14px rgba(0,0,0,.9)}
   .reel-note{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:18px;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
-  .reel-note b{color:var(--red);font-weight:400}
-
-  @media(max-width:900px){
+  .reel-note b{color:var(--red);font-weight:400}  @media(max-width:900px){
     .hero-grid,.split{grid-template-columns:1fr}
     .hero-copy{padding:60px 0 48px}
     .hero-photo{min-height:360px}
     .reel-btn .circ{width:72px;height:72px}
-    .reel{gap:0}
     .stats{grid-template-columns:1fr 1fr}
     .grid{grid-template-columns:1fr 1fr}
     .hl-row{grid-template-columns:64px 1fr;padding:28px 0;gap:20px}
@@ -207,26 +204,6 @@
       <div class="hero-photo duo duo-purple">
         <img src="images/mt-etihad-robbie.jpg" alt="Mike Toolan hosting on stage at the Etihad Stadium">
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SHOW REEL -->
-<section class="sec-black" id="showreel">
-  <div class="wrap">
-    <span class="label">Watch</span>
-    <h2 style="margin-top:16px;">Mike Toolan hosting<br>show reel.</h2>
-    <p class="reel-intro">Two minutes of Mike in his natural habitat - working the room, warming up a stadium and hosting a live show. Sound on.</p>
-    <div class="reel" id="reel">
-      <img src="images/mt-arena.jpg" alt="Mike Toolan hosting live on stage in front of a packed arena">
-      <div class="scrim"></div>
-      <button class="reel-btn" type="button" data-video="" aria-label="Play the Mike Toolan hosting show reel">
-        <span class="circ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v18l13-9z" fill="#fff"/></svg></span>
-        <span class="txt">Play show reel</span>
-      </button>
-    </div>
-    <div class="reel-note">
-      <span>Manchester Arena</span><b>&middot;</b><span>Etihad Stadium</span><b>&middot;</b><span>The Brit Fest</span><b>&middot;</b><span>Awards &amp; charity nights</span><b>&middot;</b><span>Hits Radio Drivetime</span>
     </div>
   </div>
 </section>
@@ -339,6 +316,26 @@
   </div>
 </section>
 
+<!-- SHOW REEL -->
+<section class="sec-black" id="showreel">
+  <div class="wrap">
+    <span class="label">Watch</span>
+    <h2 style="margin-top:16px;">Mike Toolan hosting<br>show reel.</h2>
+    <p class="reel-intro">Two minutes of Mike in his natural habitat - working the room, warming up a stadium and hosting a live show. Sound on.</p>
+    <div class="reel" id="reel">
+      <img src="images/mt-arena.jpg" alt="Mike Toolan hosting live on stage in front of a packed arena">
+      <div class="scrim"></div>
+      <button class="reel-btn" type="button" data-video="" aria-label="Play the Mike Toolan hosting show reel">
+        <span class="circ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v18l13-9z" fill="#fff"/></svg></span>
+        <span class="txt">Play show reel</span>
+      </button>
+    </div>
+    <div class="reel-note">
+      <span>Manchester Arena</span><b>&middot;</b><span>Etihad Stadium</span><b>&middot;</b><span>The Brit Fest</span><b>&middot;</b><span>Awards &amp; charity nights</span><b>&middot;</b><span>Hits Radio Drivetime</span>
+    </div>
+  </div>
+</section>
+
 <!-- CLIENTS + RANGE -->
 <section class="sec-black">
   <div class="wrap">
@@ -414,6 +411,7 @@
 
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 <script>
+
 /* show reel: swap the poster for the video player on click (no video loaded until asked) */
 (function(){
   var reel = document.getElementById('reel');
@@ -438,6 +436,5 @@
   });
 })();
 </script>
-
 </body>
 </html>
